@@ -1,14 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Background:</b>
-  <%= @button.background %>
-</p>
+<button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid black; color: <%= @button.color %>;"><a href="<%= @button.link %>"><%= @button.text %></a></button>
+ 
 
-<p>
-  <b>Border:</b>
-  <%= @button.border %>
-</p>
 
 <p>
   <b>Color:</b>
@@ -30,10 +24,7 @@
   <%= @button.padding %>
 </p>
 
-<p>
-  <b>Text:</b>
-  <%= @button.text %>
-</p>
+
 
 <p>
   <b>Link:</b>
