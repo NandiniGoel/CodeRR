@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<a href="<%= @button.link %>; color: <%= @button.color %>;"><button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>px; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>px;"><%= @button.text %></a></button>
+<a href="<%= @button.link %>" style="color: <%= @button.color %>;"><button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>px; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>px;"><%= @button.text %></a></button>
 
 <%= link_to 'Edit', edit_button_path(@button) %> |
 <%= link_to 'Back', buttons_path %>
