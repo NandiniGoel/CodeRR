@@ -4,12 +4,18 @@
   
 <% @buttons.each do |button| %>
   <tr>
-Link: <%= @button.link %>
-Text Color: <%= @button.color %>
+    &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
 
-
-    <td><%= link_to 'Preview', button %> | </td>
-    <td><%= link_to 'Edit', edit_button_path(button) %> | </td>
+    <td><%= button.background %></td>
+    <td><%= button.border %></td>
+    <td><%= button.color %></td>
+    <td><%= button.borderadius %></td>
+    <td><%= button.bordercolor %></td>
+    <td><%= button.padding %></td>
+    <td><%= button.text %></td>
+    <td><%= button.link %></td>
+    <td><%= link_to 'Preview', button %></td>
+    <td><%= link_to 'Edit', edit_button_path(button) %></td>
     <td><%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
