@@ -1,36 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid black; color: <%= @button.color %>;"><a href="<%= @button.link %>"><%= @button.text %></a></button>
- 
-
-
-<p>
-  <b>Color:</b>
-  <%= @button.color %>
-</p>
-
-<p>
-  <b>Borderadius:</b>
-  <%= @button.borderadius %>
-</p>
-
-<p>
-  <b>Bordercolor:</b>
-  <%= @button.bordercolor %>
-</p>
-
-<p>
-  <b>Padding:</b>
-  <%= @button.padding %>
-</p>
-
-
-
-<p>
-  <b>Link:</b>
-  <%= @button.link %>
-</p>
-
+<a href="<%= @button.link %>"><button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>;"><%= @button.text %></a></button>
 
 <%= link_to 'Edit', edit_button_path(@button) %> |
 <%= link_to 'Back', buttons_path %>
