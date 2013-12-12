@@ -1,0 +1,49 @@
+<%= form_for(@button) do |f| %>
+  <% if @button.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@button.errors.count, "error") %> prohibited this button from being saved:</h2>
+
+      <ul>
+      <% @button.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :background %><br />
+    <%= f.text_field :background %>
+  </div>
+  <div class="field">
+    <%= f.label :border %><br />
+    <%= f.text_field :border %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :borderadius %><br />
+    <%= f.text_field :borderadius %>
+  </div>
+  <div class="field">
+    <%= f.label :bordercolor %><br />
+    <%= f.text_field :bordercolor %>
+  </div>
+  <div class="field">
+    <%= f.label :padding %><br />
+    <%= f.text_field :padding %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
