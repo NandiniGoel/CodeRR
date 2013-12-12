@@ -5,7 +5,7 @@
 <% @buttons.each do |button| %>
   <tr>
   
-&lt;a href=&amp;quot;&lt;%= @button.link %&gt;&amp;quot; style=&amp;quot;color: &lt;%= @button.color %&gt;;&amp;quot;&gt;&lt;button style=&amp;quot;background-color: &lt;%= @button.background %&gt;; border: &lt;%= @button.border %&gt;px solid &lt;%= @button.bordercolor %&gt;; padding: &lt;%= @button.padding %&gt;px; color: &lt;%= @button.color %&gt;; border-radius: &lt;%= @button.borderadius %&gt;px;&amp;quot;&gt;&lt;%= @button.text %&gt;&lt;/a&gt;&lt;/button&gt;
+&lt;a href=&amp;"&lt;%= @button.link %&gt;&amp;" style=&amp;"color: &lt;%= @button.color %&gt;;&amp;"&gt;&lt;button style=&amp;"background-color: &lt;%= @button.background %&gt;; border: &lt;%= @button.border %&gt;px solid &lt;%= @button.bordercolor %&gt;; padding: &lt;%= @button.padding %&gt;px; color: &lt;%= @button.color %&gt;; border-radius: &lt;%= @button.borderadius %&gt;px;&amp;"&gt;&lt;%= @button.text %&gt;&lt;/a&gt;&lt;/button&gt;
    
     <td><%= link_to 'Preview', button %></td>
     <td><%= link_to 'Edit', edit_button_path(button) %></td>
