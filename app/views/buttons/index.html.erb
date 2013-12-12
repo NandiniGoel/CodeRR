@@ -5,10 +5,10 @@
 <% @buttons.each do |button| %>
   <tr>
   
-&lt;a href=&amp;"&lt;%= @button.link %&gt;&amp;" style=&amp;"color: &lt;%= @button.color %&gt;;&amp;"&gt;&lt;button style=&amp;"background-color: &lt;%= @button.background %&gt;; border: &lt;%= @button.border %&gt;px solid &lt;%= @button.bordercolor %&gt;; padding: &lt;%= @button.padding %&gt;px; color: &lt;%= @button.color %&gt;; border-radius: &lt;%= @button.borderadius %&gt;px;&amp;"&gt;&lt;%= @button.text %&gt;&lt;/a&gt;&lt;/button&gt;
-   
-    <td><%= link_to 'Preview', button %></td>
-    <td><%= link_to 'Edit', edit_button_path(button) %></td>
+&lt;a href=&amp;"<%= @button.link %>&amp;" style=&amp;"color: &lt;%= @button.color %&gt;;&amp;"&gt;&lt;button style=&amp;"background-color: &lt;%= @button.background %&gt;; border: &lt;%= @button.border %&gt;px solid &lt;%= @button.bordercolor %&gt;; padding: &lt;%= @button.padding %&gt;px; color: &lt;%= @button.color %&gt;; border-radius: &lt;%= @button.borderadius %&gt;px;&amp;"&gt;&lt;%= @button.text %&gt;&lt;/a&gt;&lt;/button&gt;
+
+    <td><%= link_to 'Preview', button %> | </td>
+    <td><%= link_to 'Edit', edit_button_path(button) %> | </td>
     <td><%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
