@@ -9,16 +9,17 @@
     
 
   <br>
-    <%= scaffold.form %>
-   <%= scaffold.textbox %>
-   <%= scaffold.textarea %>
-    <%= scaffold.submit %>
+    <b>Form <%= scaffold.form %>: <br></b>
+   <%= scaffold.textbox %>: &lt;input type="text" /&gt;
+   <%= scaffold.textarea %>: &lt;input type="textarea" /&gt;
+    
     <%= scaffold.dropdown %>
     <%= scaffold.value %>
     <%= scaffold.radio %>
     <%= scaffold.check %>
-    <%= link_to 'Show', scaffold %>
-    <%= link_to 'Edit', edit_scaffold_path(scaffold) %>
+    &lt;input type="submit" value="<%= scaffold.submit %>"&gt;
+    <b><%= link_to 'Preview Now!', scaffold %> </b>|
+    <%= link_to 'Edit', edit_scaffold_path(scaffold) %> |
     <%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 <% end %>
