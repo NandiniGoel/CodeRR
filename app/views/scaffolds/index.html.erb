@@ -1,37 +1,28 @@
-<h1>Listing scaffolds</h1>
-
+<h1>Existing Forms</h1>
+<br>
 <table>
+    <% @scaffolds.each do |scaffold| %>
   <tr>
-    <th>Form</th>
-    <th>Textbox</th>
-    <th>Textarea</th>
-    <th>Submit</th>
-    <th>Dropdown</th>
-    <th>Value</th>
-    <th>Radio</th>
-    <th>Check</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="span3">
+<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><%= link_to 'Create a New Form', new_scaffold_path, class: 'whitem' %>
+</b></button>
+    
 
-<% @scaffolds.each do |scaffold| %>
-  <tr>
-    <td><%= scaffold.form %></td>
-    <td><%= scaffold.textbox %></td>
-    <td><%= scaffold.textarea %></td>
-    <td><%= scaffold.submit %></td>
-    <td><%= scaffold.dropdown %></td>
-    <td><%= scaffold.value %></td>
-    <td><%= scaffold.radio %></td>
-    <td><%= scaffold.check %></td>
-    <td><%= link_to 'Show', scaffold %></td>
-    <td><%= link_to 'Edit', edit_scaffold_path(scaffold) %></td>
-    <td><%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <br>
+    <%= scaffold.form %>
+   <%= scaffold.textbox %>
+   <%= scaffold.textarea %>
+    <%= scaffold.submit %>
+    <%= scaffold.dropdown %>
+    <%= scaffold.value %>
+    <%= scaffold.radio %>
+    <%= scaffold.check %>
+    <%= link_to 'Show', scaffold %>
+    <%= link_to 'Edit', edit_scaffold_path(scaffold) %>
+    <%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Scaffold', new_scaffold_path %>
