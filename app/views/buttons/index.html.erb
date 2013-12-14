@@ -5,6 +5,8 @@
 <% @buttons.each do |button| %>
   <tr>
   	<div class="span3">
+  		<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b>
+<%= link_to 'Create a New Button', new_button_path, class: 'whitem' %></b></button> 
     &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
 
    <br />
@@ -14,10 +16,10 @@
 
   </tr>
 <% end %>
-</table>
 </div>
+</table>
+
 
 <br />
 
-<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b>
-<%= link_to 'Create a New Button', new_button_path, class: 'whitem' %></b></button> 
+
