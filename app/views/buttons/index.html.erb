@@ -1,19 +1,23 @@
 <h1>Existing Buttons</h1>
-
+<br>
 <table>
   
 <% @buttons.each do |button| %>
   <tr>
+  	<div class="span4">
     &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
 
    <br />
-    <td><%= link_to 'Preview', button %> | </td>
+    <td><B><%= link_to 'Preview Now!', button %> | </td></B>
     <td><%= link_to 'Edit', edit_button_path(button) %> | </td>
     <td><%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
   </tr>
 <% end %>
 </table>
+</div>
 
 <br />
 
-<%= link_to 'Create a New Button', new_button_path, class: 'btn btn-success' %>
+<button style="background-color: black; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;">
+<%= link_to 'Create a New Button', new_button_path %></button> 

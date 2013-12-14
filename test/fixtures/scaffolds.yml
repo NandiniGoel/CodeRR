@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  form: MyString
+  textbox: MyString
+  textarea: MyString
+  submit: MyString
+  dropdown: MyString
+  value: MyString
+  radio: MyString
+  check: MyString
+
+two:
+  form: MyString
+  textbox: MyString
+  textarea: MyString
+  submit: MyString
+  dropdown: MyString
+  value: MyString
+  radio: MyString
+  check: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131212130303) do
+ActiveRecord::Schema.define(:version => 20131214042218) do
 
   create_table "buttons", :force => true do |t|
     t.string   "background"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(:version => 20131212130303) do
     t.string   "link"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "scaffolds", :force => true do |t|
+    t.string   "form"
+    t.string   "textbox"
+    t.string   "textarea"
+    t.string   "submit"
+    t.string   "dropdown"
+    t.string   "value"
+    t.string   "radio"
+    t.string   "check"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
