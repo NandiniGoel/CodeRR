@@ -5,7 +5,7 @@
 <% @buttons.each do |button| %>
   <tr>
   	<div class="span3">
-  		<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;"></b></button>
+  		<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;">Create A New Button</a></b></button>
   		<br> 
     &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
      <B><%= link_to 'Preview Now!', button %> | </B>
