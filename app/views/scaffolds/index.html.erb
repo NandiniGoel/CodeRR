@@ -18,6 +18,7 @@
     <%= scaffold.radio %>
     <%= scaffold.check %>
     &lt;input type="submit" value="<%= scaffold.submit %>"&gt;
+    <br>
     <b><%= link_to 'Preview Now!', scaffold %> </b>|
     <%= link_to 'Edit', edit_scaffold_path(scaffold) %> |
     <%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %>
