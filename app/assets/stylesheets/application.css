@@ -11,9 +11,3 @@
  *= require_self
  *= require_tree .
  */
-button {
-	background-color: pink
-	color: green;
-	border: 1px solid pink;
-	text-decoration: bold;
-}
