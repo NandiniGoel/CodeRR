@@ -1,4 +1,6 @@
 CodRR::Application.routes.draw do
+  devise_for :users
+
   resources :scaffolds
 
 
