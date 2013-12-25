@@ -20,11 +20,9 @@
     &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
     <br>
      <B><%= link_to 'Preview Now!', button %> | </B>
-     <if button.user.email == current_user %>
+     
     <%= link_to 'Edit', edit_button_path(button) %> | 
    <%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %>
-   <% else %>
-   <% end %>
 </div>
   </tr>
 <% end %>
