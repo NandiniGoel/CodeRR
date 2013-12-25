@@ -8,8 +8,7 @@
       <% if user_signed_in? %>
 <button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;">Create A New Button</a></b></button>
 <% else %>
-<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-success'  %> or 
-  <%= link_to "Login", new_user_session_path, :class => 'btn btn-primary'  %>
+
   <% end %>
       
   		
