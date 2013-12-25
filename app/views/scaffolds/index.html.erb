@@ -11,7 +11,8 @@
 <% else %>
 
   <% end %>
-    
+    <br>
+
     <% @scaffolds.each do |scaffold| %>
   <tr>
    <div class="span3">
@@ -27,9 +28,11 @@
 &lt;/select&gt;<br>
     &lt;input type="submit" value="Submit"&gt;
     <br>
-    <b><%= link_to 'Preview Now!', scaffold %> </b>|
+    <b><%= link_to 'Preview Now!', scaffold %> </b>
+    |
     <%= link_to 'Edit', edit_scaffold_path(scaffold) %> |
     <%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
   </tr>
 <% end %>
 </div>
