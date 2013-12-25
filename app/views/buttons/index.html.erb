@@ -1,9 +1,5 @@
 <h1>Existing Buttons</h1>
 <br>
-<table>
-  
-<% @buttons.each do |button| %>
-  <tr>
   	
       <% if user_signed_in? %>
 <button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;">Create A New Button</a></b></button>
@@ -12,13 +8,18 @@
   <% end %>
       
   		
+<table>
+  
+<% @buttons.each do |button| %>
+  <tr>
+    <div class="span3">
   		<br> 
     &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
     <br>
      <B><%= link_to 'Preview Now!', button %> | </B>
     <%= link_to 'Edit', edit_button_path(button) %> | 
    <%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+</div>
   </tr>
 <% end %>
 </table>

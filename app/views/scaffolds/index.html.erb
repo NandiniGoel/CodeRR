@@ -1,9 +1,6 @@
 <h1>Existing Forms</h1>
 <br>
-<table>
-    <% @scaffolds.each do |scaffold| %>
-  <tr>
-   
+
       <% if user_signed_in? %>
 <button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/scaffolds/new" style="color: white;">Create a New Form</a>
 </b></button>
@@ -13,7 +10,10 @@
     
 
     
-
+<table>
+    <% @scaffolds.each do |scaffold| %>
+  <tr>
+   <div class="span3">
   <br>
     <b>Form <%= scaffold.form %>: <br></b>
    Textbox: <%= scaffold.textbox %>: &lt;input type="text" /&gt;<br>
@@ -29,8 +29,9 @@
     <b><%= link_to 'Preview Now!', scaffold %> </b>|
     <%= link_to 'Edit', edit_scaffold_path(scaffold) %> |
     <%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %>
-  
+  </tr>
 <% end %>
+</div>
 </table>
 
 <br />
