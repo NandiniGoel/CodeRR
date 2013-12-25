@@ -40,7 +40,7 @@
   <p class="alert alert-error"><%= alert %></p>
 <% end %>
 <% if user_signed_in? %>
-Logged in as <strong><%= current_user.email %></strong>
+Logged in as <strong><%= current_user.first_name %> <%= current_user.last_name %></strong>
 <% else %>
 <%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-success'  %> or 
   <%= link_to "Login", new_user_session_path, :class => 'btn btn-primary'  %>
