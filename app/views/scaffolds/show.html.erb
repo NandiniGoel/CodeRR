@@ -3,30 +3,13 @@
  <b>Form <%= @scaffold.form %>: <br></b>
    <%= @scaffold.textbox %>: <input type="text" /><br>
    <%= @scaffold.textarea %>: <textarea></textarea><br>
+   Radio Button: <input type="radio" name="<%= @scaffold.radio %>" value="<%= @scaffold.radio %>"><%= @scaffold.radio %></input><br>
+   Checkbox: <input type="checkbox" name="<%= @scaffold.check %>" value="<%= @scaffold.check %>"><%= @scaffold.check %></input><br>
+   <select>
+  <option value="<%= @scaffold.dropdown %>"><%= @scaffold.dropdown %></option>
+  <option value="<%= @scaffold.value %>"><%= @scaffold.value %></option>
+</select><br>
    <button class="btn btn-primary">Submit</button>
-
-
-
-<p>
-  <b>Dropdown:</b>
-  <%= @scaffold.dropdown %>
-</p>
-
-<p>
-  <b>Value:</b>
-  <%= @scaffold.value %>
-</p>
-
-<p>
-  <b>Radio:</b>
-  <%= @scaffold.radio %>
-</p>
-
-<p>
-  <b>Check:</b>
-  <%= @scaffold.check %>
-</p>
-
 
 <%= link_to 'Edit', edit_scaffold_path(@scaffold) %> |
 <%= link_to 'Back', scaffolds_path %>

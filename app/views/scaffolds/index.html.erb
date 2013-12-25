@@ -10,14 +10,15 @@
 
   <br>
     <b>Form <%= scaffold.form %>: <br></b>
-   <%= scaffold.textbox %>: &lt;input type="text" /&gt;
-   <%= scaffold.textarea %>: &lt;textarea&gt;&lt;/textarea&gt;
-    
-    <%= scaffold.dropdown %>
-    <%= scaffold.value %>
-    <%= scaffold.radio %>
-    <%= scaffold.check %>
-    &lt;input type="submit" value="<%= scaffold.submit %>"&gt;
+   Textbox: <%= scaffold.textbox %>: &lt;input type="text" /&gt;<br>
+   Textarea: <%= scaffold.textarea %>: &lt;textarea&gt;&lt;/textarea&gt;
+   Radio Button: &lt;input type="radio" name="<%= @scaffold.radio %>" value="<%= @scaffold.radio %>"&gt;<%= @scaffold.radio %></input><br>
+   Checkbox: &lt;input type="checkbox" name="<%= @scaffold.check %>" value="<%= @scaffold.check %>"&gt;<%= @scaffold.check %></input><br>
+   &lt;select&gt;
+  &lt;option value="<%= scaffold.dropdown %>"&gt;<%= @scaffold.dropdown %>&lt;/option&gt;
+  &lt;option value="<%= scaffold.value %>"&gt;<%= @scaffold.value %>&lt;/option&gt;
+&lt;/select&gt;<br>
+    &lt;input type="submit" value="Submit"&gt;
     <br>
     <b><%= link_to 'Preview Now!', scaffold %> </b>|
     <%= link_to 'Edit', edit_scaffold_path(scaffold) %> |
