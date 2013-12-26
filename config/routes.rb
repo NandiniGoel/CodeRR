@@ -1,4 +1,7 @@
 CodRR::Application.routes.draw do
+  resources :mains
+
+
   devise_for :users
 
   resources :scaffolds
@@ -6,6 +9,7 @@ CodRR::Application.routes.draw do
 
   resources :buttons
 
+root :to => "mains#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
