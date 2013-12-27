@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<br><p id="notice"><%= notice %></p>
+<div class="span5"><center>
+	This is how it will look:<br>
  <b>Form <%= @scaffold.form %>: <br></b>
    <%= @scaffold.textbox %>: <input type="text" /><br>
    <%= @scaffold.textarea %>: <textarea></textarea><br>
@@ -11,5 +12,22 @@
 </select><br>
    <button class="btn btn-primary">Submit</button>
 <br>
+</div></center>
+<div class="span5">
+	<center>
+		Copy and Paste the code given below:<br>
+		Form <%= @scaffold.form %>: <br></b>
+   Textbox: <%= @scaffold.textbox %>: &lt;input type="text" /&gt;<br>
+   Textarea: <%= @scaffold.textarea %>: &lt;textarea&gt;&lt;/textarea&gt;
+   Radio Button: &lt;input type="radio" name="<%=@scaffold.radio %>" value="<%=@scaffold.radio %>"&gt;<%=@scaffold.radio %>&lt;/input&gt;<br>
+   Checkbox: &lt;input type="checkbox" name="<%=@scaffold.check %>" value="<%=@scaffold.check %>"&gt;<%=@scaffold.check %>&lt;/input&gt; <br>
+   &lt;select&gt;
+  &lt;option value="<%=@scaffold.dropdown %>"&gt;<%=@scaffold.dropdown %>&lt;/option&gt;
+  &lt;option value="<%=@scaffold.value %>"&gt;<%=@scaffold.value %>&lt;/option&gt;
+&lt;/select&gt;<br>
+    &lt;input type="submit" value="Submit"&gt;
+	
 <%= link_to 'Edit', edit_scaffold_path(@scaffold) %> |
-<%= link_to 'Back', scaffolds_path %>
+<a href="http://limitless-ocean-5518.herokuapp.com/">Back</a>
+</center>
+</div>

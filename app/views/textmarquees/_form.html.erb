@@ -1,0 +1,29 @@
+<%= form_for(@textmarquee) do |f| %>
+  <% if @textmarquee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@textmarquee.errors.count, "error") %> prohibited this textmarquee from being saved:</h2>
+
+      <ul>
+      <% @textmarquee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </div>
+  <div class="field">
+    <%= f.label :background %><br />
+    <%= f.text_field :background %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131226140636) do
+ActiveRecord::Schema.define(:version => 20131227125545) do
 
   create_table "buttons", :force => true do |t|
     t.string   "background"
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(:version => 20131226140636) do
     t.string   "value"
     t.string   "radio"
     t.string   "check"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tests", :force => true do |t|
+    t.string   "name"
+    t.text     "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "textmarquees", :force => true do |t|
+    t.text     "text"
+    t.string   "background"
+    t.string   "color"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

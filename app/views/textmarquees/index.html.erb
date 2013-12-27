@@ -1,0 +1,27 @@
+<h1>Listing textmarquees</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Background</th>
+    <th>Color</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @textmarquees.each do |textmarquee| %>
+  <tr>
+    <td><%= textmarquee.text %></td>
+    <td><%= textmarquee.background %></td>
+    <td><%= textmarquee.color %></td>
+    <td><%= link_to 'Show', textmarquee %></td>
+    <td><%= link_to 'Edit', edit_textmarquee_path(textmarquee) %></td>
+    <td><%= link_to 'Destroy', textmarquee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Textmarquee', new_textmarquee_path %>

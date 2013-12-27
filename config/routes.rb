@@ -1,4 +1,7 @@
 CodRR::Application.routes.draw do
+  resources :textmarquees
+
+
   resources :tests
 
 
