@@ -38,7 +38,14 @@
 <% end %>
 <% if alert %>
   <p class="alert alert-error"><%= alert %></p>
-<% end %><%= yield %>
+<% end %>
+<% if user_signed_in? %>
+
+<% else %>
+<%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-success'  %> or 
+  <%= link_to "Login", new_user_session_path, :class => 'btn btn-primary'  %>
+  <% end %>
+<%= yield %>
 
 
 </html>
