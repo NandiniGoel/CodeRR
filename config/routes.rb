@@ -1,4 +1,7 @@
 CodRR::Application.routes.draw do
+  resources :tests
+
+
   resources :mains
 
 
