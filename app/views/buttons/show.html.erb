@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
-
+<p id="notice"><%= notice %></p><br>
+Created By: <%= button.user.email %><br>
 <a href="<%= @button.link %>" style="color: <%= @button.color %>;"><button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>px; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>px;" target="_blank"><%= @button.text %></a></button>
 <br>
 <%= link_to 'Edit', edit_button_path(@button) %> |
