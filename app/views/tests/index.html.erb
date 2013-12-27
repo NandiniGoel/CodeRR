@@ -1,4 +1,4 @@
-<div class="span5"><center><br><br><br><div class="page-header"><center><br><h1>Welcome 
+<div class="span5"><center><br><br><div class="page-header"><center><br><h1>Welcome 
 	<% if user_signed_in? %>
 	<%= current_user.first_name %>! 
 	<% else %>
@@ -16,10 +16,18 @@
 </div>
 <div class="span5">
   <center>
+    <br>
     <h2>Hey Buddies! Let us write our own codes. </H2>
       <H3>Now you don't need to search anymore. Fill in the fields and get the code.</H3>
       This app makes life easy for programmers.<br>
 Create your website without much efforts.
+<% if user_signed_in? %>
+
+<% else %>
+<br>
+<%= link_to "Sign up", new_user_registration_path, :class => 'btn-large btn-success'  %> or 
+  <%= link_to "Login", new_user_session_path, :class => 'btn-large btn-primary'  %>
+  <% end %>
 
         </center>
 
