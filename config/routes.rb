@@ -12,7 +12,8 @@ CodRR::Application.routes.draw do
 
   resources :buttons
 
-root :to => "main#index"
+root to: 'mains#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
