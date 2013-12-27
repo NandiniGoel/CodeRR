@@ -2,12 +2,17 @@
   <h1>Existing Buttons</h1>
 </div>
 
+  <% if user_signed_in? %>
+<button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;">Create A New Button</a></b></button>
+<% else %>
+   
+  <% end %>
   <br>
 <% @buttons.each do |button| %>
  
    <br>
   		      <b><%= button.user.full_name %><br></b>
-      &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
+     <p> &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;</p>
     <br>
     <%= link_to time_ago_in_words(button.created_at) + " ago", button %> |
      <B><%= link_to 'Preview Now!', button %> | </B>
