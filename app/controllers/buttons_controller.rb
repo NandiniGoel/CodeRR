@@ -1,4 +1,4 @@
-class ButtonsController < ApplicationController
+           class ButtonsController < ApplicationController
   # GET /buttons
   # GET /buttons.json
   def index
@@ -6,7 +6,7 @@ class ButtonsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @buttons }
+      format.json { render :partial => @buttons }
     end
   end
 
