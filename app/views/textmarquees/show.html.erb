@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="span5">
+	<center>
+		<b>This is How it will Look:</b><br>
 <marquee style="background-color: <%= @textmarquee.background %>; color: <%= @textmarquee.color %>;">
 <%= @textmarquee.text %></marquee>
+</center>
+</div>
+<div class="span5">
+<center>
 &lt;marquee style="background-color: <%= @textmarquee.background %>; color: <%= @textmarquee.color %>;"&gt;
 <%= @textmarquee.text %>&lt;/marquee&gt;
-
+</center>
+</div>
 
 <%= link_to 'Edit', edit_textmarquee_path(@textmarquee) %> |
 <a href="http://limitless-ocean-5518.herokuapp.com/">Back</a>
