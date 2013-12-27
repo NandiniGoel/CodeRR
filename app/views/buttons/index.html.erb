@@ -2,29 +2,25 @@
   <h1>Existing Buttons</h1>
 </div>
 
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
 <button style="background-color: green; border: 1px solid black; padding: 5px; color: white; border-radius: 3px;"><b><a href="http://limitless-ocean-5518.herokuapp.com/buttons/new" style="color: white;">Create A New Button</a></b></button>
 <% else %>
    
   <% end %>
-  <br>
+
 <% @buttons.each do |button| %>
- 
-   <br>
-  		      <b><%= button.user.full_name %><br></b>
-     <p> &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;</p>
-    <br>
-    <%= link_to time_ago_in_words(button.created_at) + " ago", button %> |
-     <B><%= link_to 'Preview Now!', button %> | </B>
-     
-    <%= link_to 'Edit', edit_button_path(button) %> | 
-   <%= link_to 'Destroy', button, method: :delete, data: { confirm: 'Are you sure?' } %>
-<br>
-<hr>
+<div class="button">
+  <strong><%= button.user.full_name %></strong>
+  <p>&lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;</p>
+  <div class="meta">
+    <%= link_to time_ago_in_words(button.created_at) + " ago", button %> 
+    <span class="admin">
+      | <%= link_to "Edit", edit_button_path(button) %> | 
+      <%= link_to "Delete", button, method: :delete, data: { confirm: "Are you sure your want to delete this button?"} %>
+    </span>
+  </div>
+</div>
 <% end %>
 
-
-
-<br />
 
 
