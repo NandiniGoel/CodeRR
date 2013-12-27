@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131227125545) do
+ActiveRecord::Schema.define(:version => 20131227131906) do
 
   create_table "buttons", :force => true do |t|
     t.string   "background"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(:version => 20131227125545) do
   end
 
   add_index "buttons", ["user_id"], :name => "index_buttons_on_user_id"
+
+  create_table "dropdowns", :force => true do |t|
+    t.string   "title"
+    t.string   "value1"
+    t.string   "value2"
+    t.string   "value3"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "mains", :force => true do |t|
     t.datetime "created_at", :null => false

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="span5">
+	<center>
+<b>This is how It will look:</b><br>
+<b class="dropdown">
+              <b href="#" class="dropdown-toggle" data-toggle="dropdown"><br><b> <%= @dropdown.title %></b> <b class="caret"></b></b>
+              <ul class="dropdown-menu">
+<li><b><%= @dropdown.value1 %></b>
+</li><li class="divider"></li>
+                <li><b><%= @dropdown.value2 %></b></li><li class="divider"></li>
+                <li><b> <%= @dropdown.value3 %></b></li><li class="divider"></li>
+               
+              </ul></b>
+            </a>
+</div></center>
+
+
+<div class="span5">
+	<center>
+<b>Copy and Paste the Code Given Below</b><br>
+&lt;b class="dropdown"&gt;
+              &lt;b href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;&lt;br&gt;&lt;b&gt; <%= @dropdown.title %>&lt;/b&gt; &lt;b class="caret"&gt;&lt;/b&gt;&lt;/b&gt;
+              &lt;ul class="dropdown-menu"&gt;
+&lt;li&gt;&lt;b&gt;<%= @dropdown.value1 %>&lt;/b&gt;
+&lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt; <%= @dropdown.value2 %>&lt;/b&gt;&lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt; <%= @dropdown.value3 %> &lt;/b&gt;&lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;
+               
+              &lt;/ul&gt;&lt;/b&gt;
+            &lt;/a&gt;
+
+
+
+
+<%= link_to 'Edit', edit_dropdown_path(@dropdown) %> |
+<a href="http://limitless-ocean-5518.herokuapp.com/">Back</a>
+
+
+</div></center>

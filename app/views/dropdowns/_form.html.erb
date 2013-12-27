@@ -1,0 +1,33 @@
+<%= form_for(@dropdown) do |f| %>
+  <% if @dropdown.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dropdown.errors.count, "error") %> prohibited this dropdown from being saved:</h2>
+
+      <ul>
+      <% @dropdown.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :value1 %><br />
+    <%= f.text_field :value1 %>
+  </div>
+  <div class="field">
+    <%= f.label :value2 %><br />
+    <%= f.text_field :value2 %>
+  </div>
+  <div class="field">
+    <%= f.label :value3 %><br />
+    <%= f.text_field :value3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
