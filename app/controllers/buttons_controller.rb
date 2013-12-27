@@ -6,7 +6,7 @@
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :partial => @buttons }
+      format.json { render json: @buttons }
     end
   end
 

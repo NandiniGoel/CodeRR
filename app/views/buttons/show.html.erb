@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p><br>
-Created By: <%= @button.user.full_name %><br>
+<div class="span6">
+<center>
+This is how it will look
+
 <a href="<%= @button.link %>" style="color: <%= @button.color %>;"><button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>px; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>px;" target="_blank"><%= @button.text %></a></button>
+</center></div>
+<div class="span6"><center>
+	This is the code you need to embed on your website
+<p>&lt;a href="<%= @button.link %>" style="color: <%= @button.color %>;"&gt; &lt;button style="background-color: <%= @button.background %>; border: <%= @button.border %>px solid <%= @button.bordercolor %>; padding: <%= @button.padding %>px; color: <%= @button.color %>; border-radius: <%= @button.borderadius %>px;"&gt;<%= @button.text %>&lt;/a>&lt;/button&gt;</p>
+<br><p>Copy and Paste</p>
+</div></center>
 <br>
-<%= link_to 'Edit', edit_button_path(@button) %> |
-<%= link_to 'Back', buttons_path %>
+<%= link_to 'Edit', edit_button_path(@button), :class => 'btn btn-primary' %> |
+<a href="http://limitless-ocean-5518.herokuapp.com/" class="btn">Back</a>
