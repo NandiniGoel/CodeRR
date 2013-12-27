@@ -14,7 +14,7 @@
   		      <b><%= button.user.first_name %> <%= button.user.last_name %><br></b>
       &lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;
     <br>
-    <%= link_to time_ago_in_words(button.created_at), button %>
+    <%= link_to time_ago_in_words(button.created_at) + "ago", button %>
      <B><%= link_to 'Preview Now!', button %> | </B>
      
     <%= link_to 'Edit', edit_button_path(button) %> | 
