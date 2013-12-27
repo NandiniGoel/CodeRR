@@ -1,19 +1,12 @@
-<h1>Listing tests</h1>
-<%= link_to 'New Test', new_test_path %>
+<body>
 
-<table>
-  
-<% @tests.each do |test| %>
-  <tr>
-    <td><%= test.name %></td>
-    <td><%= test.text %></td>
-    <td><%= link_to 'Show', test %></td>
-    <td><%= link_to 'Edit', edit_test_path(test) %></td>
-    <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="span4"><center><br><br><br><div class="page-header"><center><br><h1>Welcome to Educate My Girl Coder App</div></h1>
+<br>
+  <a href="http://limitless-ocean-5518.herokuapp.com/buttons" class="btn btn-primary"><b>Create a Button</a></b> | <a href="http://limitless-ocean-5518.herokuapp.com/scaffolds" class="btn btn-success"><b>Create a Form</a></b>
 
-<br />
+</center>
+</div>
+
+
 
 
