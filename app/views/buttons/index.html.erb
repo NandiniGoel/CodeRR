@@ -10,7 +10,7 @@
 
 <% @buttons.each do |button| %>
 <div class="button">
-  <strong><%= button.user.full_name %></strong>
+ 
   <p>&lt;a href="<%= button.link %>" style="color: <%= button.color %>;"&gt; &lt;button style="background-color: <%= button.background %>; border: <%= button.border %>px solid <%= button.bordercolor %>; padding: <%= button.padding %>px; color: <%= button.color %>; border-radius: <%= button.borderadius %>px;"&gt;<%= button.text %>&lt;/a>&lt;/button&gt;</p>
   <div class="meta">
     <%= link_to time_ago_in_words(button.created_at) + " ago", button %> 
