@@ -12,14 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :img %><br />
+    <%= f.label :img %>Url. (Right Click and Copy the Image URL)<br />
     <%= f.text_field :img %>
   </div>
   <div class="field">
     <%= f.label :text %><br />
     <%= f.text_field :text %>
   </div>
- 
+  <div class="field">
+    <%= f.label :your_facebook_name %><br />
+    <%= f.text_field :extra %>
+  </div>
+  <div class="field">
+    <%= f.label :your_twitter_name %><br />
+    <%= f.text_field :extram %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -14,6 +14,11 @@
 </style>
 
 <b><font face="Curlz MT"><font size="6"> <%= @header.text %></font></font></b>
+<ul class="nav pull-right">
+	<b>Join Us:</b>
+	<a href="htp://www.facebook.com/<%= header.extra %>" style="border-radius: 20;"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTr84b0TsRzZ-u9TM_hBszWlWb6Pgwz09j7gDWhTvAvy30uUqfDfA" width="20" height="20"></a>
+	 <a href="http://www.twitter.com/<%= header.extram %>" style="border-radius: 20;"><img src="http://131940.qld.gov.au/CMSTemplates/DMRASPX/Images/twitter-bird-white-on-blue.png" width="20" height="20"></a>
+	 </ul>
 </div>
 </div>
 </div>
@@ -21,7 +26,7 @@
 <b>Copy and Embed the Code Given Below:</b>
 <br>
 <center>
-&lt;div class="navbar"&gt;   
+&lt;div class="navbar navbar-fixed"&gt;   
 &lt;div class="navbar-inner"&gt;    
 &lt;div class="container"&gt;
 &lt;br&gt;
@@ -34,11 +39,18 @@
 &lt;/style&gt;
 
 &lt;b&gt;&lt;font face="Curlz MT"&gt;&lt;font size="6"&gt;<%= @header.text %>&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;
+
+&lt;ul class="nav pull-right"&gt;
+	&lt;b&gt;Join Us:&lt;/b&gt;
+	&lt;a href="<%= header.extra %>" style="border-radius: 20;"&gt;&lt;img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTr84b0TsRzZ-u9TM_hBszWlWb6Pgwz09j7gDWhTvAvy30uUqfDfA" width="20" height="20"&gt;&lt;/a&gt;
+	 &lt;a href="<%= header.extram %>" style="border-radius: 20;"&gt;&lt;img src="http://131940.qld.gov.au/CMSTemplates/DMRASPX/Images/twitter-bird-white-on-blue.png" width="20" height="20"&gt;&lt;/a&gt;
+	 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 
 <%= link_to 'Edit', edit_header_path(@header) %> |
-<%= link_to 'Back', headers_path %>
+<a href="http://limitless-ocean-5518.herokuapp.com/" class="btn">Back</a>
+
 </center>
