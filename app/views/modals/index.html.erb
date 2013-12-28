@@ -1,0 +1,25 @@
+<h1>Listing modals</h1>
+
+<table>
+  <tr>
+    <th>Header</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modals.each do |modal| %>
+  <tr>
+    <td><%= modal.header %></td>
+    <td><%= modal.text %></td>
+    <td><%= link_to 'Show', modal %></td>
+    <td><%= link_to 'Edit', edit_modal_path(modal) %></td>
+    <td><%= link_to 'Destroy', modal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modal', new_modal_path %>

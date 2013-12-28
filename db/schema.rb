@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131227131906) do
+ActiveRecord::Schema.define(:version => 20131228080435) do
 
   create_table "buttons", :force => true do |t|
     t.string   "background"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(:version => 20131227131906) do
   end
 
   create_table "mains", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "modals", :force => true do |t|
+    t.string   "header"
+    t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
