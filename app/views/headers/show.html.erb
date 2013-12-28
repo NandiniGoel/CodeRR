@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<br>
+<b>This is how it will look:</b>
+<div class="navbar">   
+<div class="navbar-inner">    
+<div class="container">
+<br>
+
+<img src="<%= @header.img %>" width="60" height=" 60" id="logo" class="box45">
+<style>
+.box45 {
+   border-radius: 15px;
+}
+</style>
+
+<b><font face="Curlz MT"><font size="6"> <%= @header.text %></font></font></b>
+</div>
+</div>
+</div>
+<br><br>
+<b>Copy and Embed the Code Given Below:</b>
+<br>
+<center>
+&lt;div class="navbar"&gt;   
+&lt;div class="navbar-inner"&gt;    
+&lt;div class="container"&gt;
+&lt;br&gt;
+
+&lt;img src="<%= @header.img %>" width="60" height=" 60" id="logo" class="box45"&gt;
+&lt;style&gt;
+.box45 {
+   border-radius: 15px;
+}
+&lt;/style&gt;
+
+&lt;b&gt;&lt;font face="Curlz MT"&gt;&lt;font size="6"&gt;<%= @header.text %>&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+<%= link_to 'Edit', edit_header_path(@header) %> |
+<%= link_to 'Back', headers_path %>
+</center>
