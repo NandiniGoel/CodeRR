@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<div class="span5">
+<b>This is How it will look</b>
+<script type="text/javascript">
+
+var slideimages=new Array()
+
+function slideshowimages()
+
+{
+
+     for (i=0;i<slideshowimages.arguments.length;i++){
+
+         slideimages[i]=new Image()
+
+         slideimages[i].src=slideshowimages.arguments[i]
+
+    }
+
+}
+
+</script>
+
+<!--        copyright of Educate My Girl  Program     -->
+
+</style>
+
+<a href="http://educatemygirl.org/" target="_blank"><img src="" alt="Slideshow Image Script" title="Educate My Girl CodeRR App SlideShow Script" name="slide" border=0 width="400px" height="140" id="img456">
+</a>
+<script type="text/javascript">
+
+slideshowimages("<%= @carousal.image %>","<%= @carousal.image2 %>","<%= @carousal.image3 %>" )
+
+var slideshowspeed=8500
+
+var whichimage=0
+
+function slideit()
+
+{
+
+     if (!document.images)
+
+           return
+
+     document.images.slide.src=slideimages[whichimage].src
+
+     if (whichimage<slideimages.length-1)
+
+              whichimage++
+
+     else
+
+              whichimage=0
+
+      setTimeout("slideit()",slideshowspeed)
+
+}
+
+ slideit()
+
+</script>
+
+</div>
+<div class="span4">
+	<b>This is the code, copy and embed:</b>
+
+
+
+<%= link_to 'Edit', edit_carousal_path(@carousal), :class => 'btn btn-primary' %> |
+<a href="http://limitless-ocean-5518.herokuapp.com/" class="btn">Back</a>
+</div>
